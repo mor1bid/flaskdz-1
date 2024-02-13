@@ -5,26 +5,27 @@
     <title>{% block title %}Моя семья{% endblock %}</title>
 </head>
 <body>
-{% block content %}
-    <header>
-        <h1>Я шапка!</h1>
-    </header>
+{% block header %}
+<header>
+    <h1>Я шапка!</h1>
+</header>
+{% endblock %}
+
+{% block menu %}
+    <ul>
+        <li><a href="{{url_for('clothes')}}">это Одежда!</a></li>
+        <li><a href="{{url_for('boots')}}">это Обувь!</a></li>
+        <li><a href="{{url_for('curtco')}}">это Куртка!</a></li>
+    </ul>
 {% endblock %}
 
 {% block content %}
-    <menu>
-        <ln>
-            <a href="">это Одежда!</a>
-            <a href="">это Обувь!</a>
-            <a href="">это Куртка!</a>
-        </ln>
-    </menu>
 {% endblock %}
 
-{% block content %}
-    <footer>
-        <h4>Я подвал!</h4>
-    </footer>
+{% block footer %}
+<footer>
+    <h4>Я подвал!</h4>
+</footer>
 {% endblock %}
 
 </body>
